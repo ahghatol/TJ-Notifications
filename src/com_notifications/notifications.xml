@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" type="component" version="3.1">
+	<name>com_notifications</name>
+	<author>Joomla! Project</author>
+	<creationDate>January 2019</creationDate>
+	<copyright>Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>1.0.0</version>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>notifications.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>images</folder>
+		<folder>models</folder>
+		<folder>controllers</folder>
+	</files>
+	<languages folder="site/language">
+		<language tag="en-GB">en-GB.com_notifications.ini</language>
+	</languages>
+	<administration>
+		<menu>com_notifications</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>notifications.php</filename>
+			<filename>controller.php</filename>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>sql</folder>
+			<folder>models</folder>
+			<folder>helpers</folder>
+			<folder>controllers</folder>
+			<folder>images</folder>
+		</files>
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB.com_notifications.ini</language>
+			<language tag="en-GB">en-GB.com_notifications.sys.ini</language>
+		</languages>
+	</administration>
+	<scriptfile>install.notifications.php</scriptfile>
+</extension>
